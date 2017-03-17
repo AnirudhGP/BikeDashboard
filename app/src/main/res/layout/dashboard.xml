@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <!--<TextView-->
+        <!--android:background="@drawable/range_circle"-->
+        <!--android:layout_width="250dp"-->
+        <!--android:layout_height="250dp"-->
+        <!--android:gravity="center"-->
+        <!--android:id="@+id/speed"-->
+        <!--android:text="36"-->
+        <!--android:textColor="#FFFFFF"-->
+        <!--android:textSize="120dp"-->
+        <!--android:fontFamily=""-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_centerHorizontal="true" />-->
+
+    <com.hookedonplay.decoviewlib.DecoView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:gravity="center"
+
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+    android:id="@+id/rangeArc"/>
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:gravity="center"
+        android:id="@+id/speed"
+        android:text="36"
+        android:textColor="#FFFFFF"
+        android:textSize="120dp"
+        android:fontFamily=""
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <ImageButton
+    android:id="@+id/status"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:src="@mipmap/power"
+    android:background="#000"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true" />
+
+<ImageView
+    android:id="@+id/batt_energy"
+    android:layout_width="38dp"
+    android:layout_height="44dp"
+    android:src="@mipmap/batt_energy"
+    android:layout_centerVertical="true"
+    android:layout_toStartOf="@+id/batt_soc" />
+
+<ImageView
+    android:id="@+id/motor_current"
+    android:layout_width="30dp"
+    android:layout_height="50dp"
+    android:src="@drawable/motor_current"
+    android:layout_alignBottom="@+id/rangeArc"
+    android:layout_alignStart="@+id/motor_rpm"
+    android:layout_marginStart="6dp" />
+
+<TextView
+    android:id="@+id/range"
+    android:layout_width="90sp"
+    android:layout_height="50sp"
+    android:gravity="center"
+    android:textSize="45sp"
+    android:text="40"
+    android:textColor="#FFF"
+    android:layout_marginTop="7dp"
+    android:layout_alignTop="@+id/batt_temp"
+    android:layout_centerHorizontal="true" />
+
+<TextView
+    android:id="@+id/range_km"
+    android:layout_width="50dp"
+    android:layout_height="30dp"
+    android:gravity="center"
+    android:textSize="18sp"
+    android:text="km"
+    android:textColor="#FFF"
+    android:layout_below="@+id/batt_temp"
+    android:layout_alignStart="@+id/status" />
+
+<TextView
+    android:id="@+id/speed_unit"
+    android:layout_width="72dp"
+    android:layout_height="53dp"
+    android:gravity="center"
+    android:textSize="18sp"
+    android:text="km/h"
+    android:textColor="#FFF"
+    android:layout_marginTop="10dp"
+    android:layout_below="@+id/motor_power"
+    android:layout_centerHorizontal="true" />
+
+<ImageView
+    android:id="@+id/motor_power"
+    android:layout_width="55dp"
+    android:layout_height="38dp"
+    android:src="@mipmap/motor_power"
+    tools:layout_editor_absoluteX="572dp"
+    tools:layout_editor_absoluteY="163dp"
+    android:layout_marginStart="8dp"
+    android:layout_alignBottom="@+id/batt_energy"
+    android:layout_toEndOf="@+id/motor_rpm" />
+
+<TextView
+    android:id="@+id/soc"
+    android:layout_width="55dp"
+    android:layout_height="24dp"
+    android:textSize="18sp"
+    android:gravity="center"
+    android:text="100%"
+    android:textColor="#FFF"
+    android:layout_above="@+id/batt_energy"
+    android:layout_alignEnd="@+id/batt_soc"
+    android:layout_marginEnd="3dp"
+    android:layout_marginBottom="34dp" />
+
+<TextView
+    android:id="@+id/energy"
+    android:layout_width="100dp"
+    android:layout_height="25dp"
+    android:textSize="18sp"
+    android:gravity="center"
+    android:text="15Wh/km"
+    android:textColor="#FFF"
+    android:layout_marginEnd="14dp"
+    android:layout_below="@+id/batt_energy"
+    android:layout_alignEnd="@+id/batt_temp" />
+
+<TextView
+    android:id="@+id/temp"
+    android:layout_width="55dp"
+    android:layout_height="24dp"
+    android:textSize="18sp"
+    android:gravity="center"
+    android:text="28C"
+    android:textColor="#FFF"
+    android:layout_below="@+id/batt_temp"
+    android:layout_alignStart="@+id/soc" />
+
+<TextView
+    android:id="@+id/rpm"
+    android:layout_width="76dp"
+    android:layout_height="24dp"
+    android:gravity="center"
+    android:text="350rpm"
+    android:textColor="#FFF"
+    android:textSize="18sp"
+    android:layout_marginEnd="44dp"
+    android:layout_below="@+id/motor_rpm"
+    android:layout_alignEnd="@+id/motor_power" />
+
+<TextView
+    android:id="@+id/power"
+    android:layout_width="55dp"
+    android:layout_height="24dp"
+    android:gravity="center"
+    android:text="400W"
+    android:textColor="#FFF"
+    android:textSize="18sp"
+    android:layout_below="@+id/motor_power"
+    android:layout_alignStart="@+id/motor_power"
+    android:layout_marginStart="3dp" />
+
+<ImageView
+    android:id="@+id/batt_soc"
+    android:layout_width="63dp"
+    android:layout_height="56dp"
+    android:src="@mipmap/batt_100"
+    android:layout_marginEnd="64dp"
+    android:layout_alignTop="@+id/rangeArc"
+    android:layout_toStartOf="@+id/rangeArc" />
+
+<TextView
+    android:id="@+id/current"
+    android:layout_width="50dp"
+    android:layout_height="24dp"
+    android:textSize="18sp"
+    android:gravity="center"
+    android:text="21A"
+    android:textColor="#FFF"
+    android:layout_below="@+id/motor_current"
+    android:layout_toStartOf="@+id/motor_power" />
+
+<ImageView
+    android:id="@+id/motor_rpm"
+    android:layout_width="43dp"
+    android:layout_height="46dp"
+    android:src ="@mipmap/motor_rpm"
+    android:layout_marginStart="84dp"
+    android:layout_alignBottom="@+id/batt_soc"
+    android:layout_toEndOf="@+id/rangeArc" />
+
+<ImageView
+    android:id="@+id/batt_temp"
+    android:layout_width="30dp"
+    android:layout_height="50dp"
+    android:src="@drawable/batt_temp_cool"
+    android:layout_marginEnd="12dp"
+    android:layout_alignBottom="@+id/rangeArc"
+    android:layout_alignEnd="@+id/temp" />
+
+<TextClock
+    android:id="@+id/textClock"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:format12Hour="hh:mm a"
+    android:gravity="center_horizontal"
+    android:textColor="#FFF"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginStart="49dp" />
+
+
+<!--<ImageView-->
+    <!--android:id="@+id/settings"-->
+    <!--android:layout_width="39dp"-->
+    <!--android:layout_height="37dp"-->
+    <!--tools:layout_editor_absoluteY="0dp"-->
+    <!--tools:layout_editor_absoluteX="0dp" />-->
+
+</RelativeLayout>

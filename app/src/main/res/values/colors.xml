@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#000000</color>
+    <color name="colorSpeedBkg">#000000</color>
+    <color name="colorSpeedOutlineGreen">#00FF00</color>
+    <color name="colorSpeedOutlineRed">#FF0000</color>
+    <color name="colorSpeedOutlineOrange">#FFA500</color>
+    <color name="colorRange">#FFA500</color>
+</resources>
